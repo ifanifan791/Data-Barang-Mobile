@@ -111,7 +111,7 @@ class DatabaseHelper {
   }
 
   Future<int> getLastItemId() async {
-    final db = await database; // Pastikan Anda memiliki akses ke database
+    final db = await database; 
     final List<Map<String, dynamic>> result =
         await db.rawQuery('SELECT MAX(id) as maxId FROM items');
     return result.isNotEmpty && result[0]['maxId'] != null
@@ -149,7 +149,7 @@ class DatabaseHelper {
   }
 
   Future<int> getLastCategoryId() async {
-    final db = await database; // Pastikan Anda memiliki akses ke database
+    final db = await database; 
     final List<Map<String, dynamic>> result =
         await db.rawQuery('SELECT MAX(id) as maxId FROM categories');
     return result.isNotEmpty && result[0]['maxId'] != null

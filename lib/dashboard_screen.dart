@@ -46,7 +46,7 @@ class _ItemListPageState extends State<ItemListPage> {
                 leading:
                     Image.file(File(item.imagePath), width: 50, height: 50),
                 title: Text(item.name),
-                subtitle: Text('${item.category} - Rp ${item.price}'),
+                subtitle: Text('${item.category} - Rp ${item.price} - ${item.stock}'),
                 onTap: () {
                   Navigator.push(
                     context,
